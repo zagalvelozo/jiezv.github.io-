@@ -1,12 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Jiezv</title>
-</head>
-<body>
-    <h1>Hello World!</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- minify -->
+    <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <div id="nescss">
+      <header :class="{ sticky: scrollPos > 50 }">
+        <div class="container">
+          <div class="nav-brand">
+            <p>Jesús Zagal Velozo</p>
+          </div>
+          <div class="social-buttons">
+            <p>Find Me</p>
+            <div class="share">
+              <a href="mailto:zagalvelozo@gmail.com" target="_blank"><i class="nes-icon gmail"></i></a>
+              <a href="https://wa.me/56973483908" target="_blank"><i class="nes-icon whatsapp"></i></a>
+              <a href="https://www.linkedin.com/in/jes%C3%BAs-zagal-velozo-6812a81aa/" target="_blank"><i class="nes-icon linkedin"></i></a>
+              <a href="https://github.com/zagalvelozo" target="_blank"><i class="nes-icon github"></i></a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="container">
+        <main class="main-content">
+
+          <!-- About -->
+          <section class="topic">
+            <h2 id="about"><a href="#about">#</a>About Me</h2>
+            <p>Critical thinking, decision-making and problem solving skills. Special skills and experience on startups.</p>
+          </section>
+
+          <!-- tecnologies -->
+          <section class="topic">
+              <h2 id="tecnologies"><a href="#tecnologies">#</a>Tecnologies</h2>
+              <article class="article-link">
+                <h3 class="title">
+                  <a href="https://medium.com/@bc_rikko/why-i-created-and-released-nes-css-ee8966bacd09" target="_blank" rel="noopener"><i class="nes-icon star"></i><span>Angular - One framework. Mobile & desktop.</span></a>
+                </h3>
+              </article>
+              <article class="article-link">
+                <h3 class="title">
+                  <a href="https://nestjs.com" target="_blank" rel="noopener"><i class="nes-icon star"></i><span>NestJS - A progressive Node.js framework</span></a>
+                </h3>
+              </article>
+              <article class="article-link">
+                <h3 class="title">
+                  <a href="https://www.mongodb.com" target="_blank" rel="noopener"><i class="nes-icon star"></i><span>MongoDB - The most popular database for modern apps</span></a>
+                </h3>
+              </article>
+              <article class="article-link">
+                <h3 class="title">
+                  <a href="https://nodejs.org" target="_blank" rel="noopener"><i class="nes-icon star"></i><span>Node.js - JavaScript runtime built on Chrome's V8 JavaScript engine.</span></a>
+                </h3>
+              </article>
+          </section>
+
+        </main>
+
+        <footer>
+          <p>
+            <span>&copy;2020</span>
+            <a href="https://zagalvelozo.github.io/" target="_blank" rel="noopener">Jesús Zagal Velozo</a>
+            <span>-</span>
+            <a href="https://instagram.com/jsontoken" target="_blank" rel="noopener">@jsontoken</a>
+          </p>
+        </footer>
+
+        <!-- Copied balloon -->
+        <div class="nes-balloon from-right copied-balloon" :style="copiedBalloon">
+          <p>copied!!</p>
+        </div>
+
+        <!-- FAB Button -->
+        <button type="button" class="nes-btn is-error scroll-btn" :class="{ active: scrollPos > 500 }" @click="window.scrollTo({ top:0, behavior: 'smooth' })"><span>&lt;</span></button>
+        </div>
+    </div>
+  </body>
 </html>
+
